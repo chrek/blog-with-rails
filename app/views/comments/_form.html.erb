@@ -1,0 +1,50 @@
+<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+
+  <p>
+    <div class="field is-horizontal">
+      <div class="field-label is-large">
+        <%= form.label :commenter, class: "label is-large" %>  
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <%= form.text_field :commenter, class: "input is-medium is-danger" %>
+          </div>
+          <p class="help is-danger">
+            This field is required
+          </p>
+        </div>
+      </div>
+    </div>
+  </p><br>
+
+  <p>    
+    <div class="field is-horizontal">
+      <div class="field-label is-large">
+        <%= form.label :body, class: "label is-large" %>
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <%= form.text_area :body, class: "textarea" %>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </p><br>
+ 
+  <p>
+    <div class="field is-horizontal">
+      <div class="field-label">
+        <!-- Left empty for spacing -->
+      </div>
+      <div class="field-body">
+        <div class="field">
+          <div class="control">
+            <%= form.submit 'Save Comment', :class => 'button is-primary' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p><br>
+<% end %>

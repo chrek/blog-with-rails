@@ -1,0 +1,33 @@
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Listing articles 
+      </h1>
+    </div>
+  </div>
+</section>
+
+<h3 class="title is-3">
+  <%= link_to 'Create new article', new_article_path %>
+</h3>
+
+<table class="table table is-striped is-bordered is-hoverable is-fullwidth">
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="3">Actions</th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <td><%= article.text %></td>
+      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <td><%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
