@@ -7,6 +7,8 @@ This site is using Rails and Bulma CSS.
 
 Bulma is installed like any other gem powered apps with the Gemfile.
 
+## Database: Sqlite3
+
 ## What has been implemented
 * Cutomized Sass and Sass variables
 
