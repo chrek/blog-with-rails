@@ -8,7 +8,7 @@ gem 'rails', '~> 6.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 3.12.4'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -66,3 +66,5 @@ gem "rubyzip", ">= 1.3.0"
 gem 'bundler-audit', '~> 0.6.1'
 
 gem 'rails-html-sanitizer', '~> 1.3'
+
+gem "actionview", ">= 6.0.2.2"
